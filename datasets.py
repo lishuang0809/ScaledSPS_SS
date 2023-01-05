@@ -23,7 +23,7 @@ load_dotenv()
 
 def get_dataset(name, batch_size, percentage=1.0, scale_range=None, loss_target_range=None):
 
-    datasets_path = os.getenv("DATASETS_DIR")
+    datasets_path = './datasets'    #os.getenv("DATASETS_DIR")
     print(datasets_path)
 
     if name == "MNIST":
@@ -54,7 +54,7 @@ def get_dataset(name, batch_size, percentage=1.0, scale_range=None, loss_target_
         train_target = torch.tensor(trainY, dtype=torch.float)
         
     elif name == "colon-cancer":
-        trainX, trainY = load_svmlight_file(f"{datasets_path}/{name}") 
+        trainX, trainY = load_svmlight_file(f"{datasets_path}/{name}")
 
         sample = np.random.choice(trainX.shape[0], round(trainX.shape[0] * percentage), replace=False)
 

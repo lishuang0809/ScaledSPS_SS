@@ -170,10 +170,15 @@ if __name__ == "__main__":
 
     print(args)
 
+   # main(args.dataset, args.percent, args.scale, args.batch_size, args.epochs, args.loss, args.optimizer, args.lr,
+  #  args.preconditioner, args.slack, args.lmd, args.seed, args.save, args.tb)
+
+
+
     main(args.dataset, args.percent, args.scale, args.batch_size, args.epochs, args.loss, args.optimizer, args.lr,
     args.preconditioner, args.slack, args.lmd, args.seed, args.save, args.tb)
 
 
-
 # python train.py --dataset= --percent= --scale_data= --batch_size= --epochs= --loss= --optimizer= --lr== --preconditioner= --slack_method= --seed= --save
 
+# python3 run.py --dataset="colon-cancer" --batch_size=100 --epochs=20 --loss="logreg" --optimizer="sgd"
